@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width", initial-scale=1>
-  <meta name="author" content="">
-  <meta name="description" content=" ">
-  <meta name="keywords" content="">
-  <title>Canseco - CS 3 </title>
+  <meta name="author" content="Elizabeth Simone M. Requioma">
+  <meta name="description" content="A simple web app for singing the Happy Birthday song!">
+  <meta name="keywords" content="happy, birthday, sing, web, app">
+  <title>Requioma - CS 3 </title>
   <!-- using the w3.css framework to show how predefined css classes can be used inside an html document.  -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- local css property definitions to further enhance the page -->
@@ -23,13 +23,13 @@
       take note: just a demonsration on how it can be used. Responsive to the size of the viewport
   -->
   <div class="w3-bar w3-black">
-    <a href="/" class="w3-bar-item w3-button w3-mobile">Home</a>
+    <a href="/" class="w3-bar-item w3-button w3-mobile" >Home</a>
     <a href="/happy" class="w3-bar-item w3-button w3-mobile">Happy</a> 
   </div>
 
 
   <header class="w3-container" id="header" > 
-    <h1>Roy Canseco - III-K - Jan 2025</h1>
+    <h1>Elizabeth Requioma - 9-Rb - Mar 2025</h1>
     <h2> Birthday </h2>
   </header>
 
@@ -38,24 +38,24 @@
     <!-- define the form and prevents its default action after it is submitted then call three functions-->
     <form  id="input_form" method="post" action="/happy" 
         onsubmit="return confirm('Sure to Submit')"
-        onreset="return confirm('Sure to Submit')"
+        onreset="return confirm('Sure to Reset')"
     />
 
       <div class="w3-row">
         <div class="w3-third w3-panel w3-card w3-margin">
           <label for="name">Your nickname:</label></br>
-          <input class="w3-input" type="text" id="name" name="name"><br>
+          <input class="w3-input" type="text" id="name" name="name" required><br>
 
           <label for="gender">Gender: </label><br>
-          <input class="w3-radio"  type="radio" id="male" name="gender" value="male">
+          <input class="w3-radio"  type="radio" id="male" name="gender" value="male" required>
           <label for="male">Male</label> <br>
           <input class="w3-radio w3-margin-bottom"  type="radio" id="female" name="gender" value="female">
           <label for="female">Female</label>
         </div>
       
-      <div class="w3-panel w3-third w3-card w3-margin w3-padding"
+      <div class="w3-panel w3-third w3-card w3-margin w3-padding"/>
       <label for="number"> Number of close family and friends: </label><br>
-      <select class="w3-select w3-border" id="number" name="number" onchange="generateGuestFields()">
+      <select class="w3-select w3-border" id="number" name="number" onchange="generateGuestFields()" required>
         <option value="">--Please choose a number--</option>
         <!-- sample use of script to generate choices for a drop-down menu that shows numbers from 1 to 16 -->
         <script>
@@ -68,8 +68,8 @@
       <!-- to submit a form and formatted again using w3.css classess -->
       <!-- clicking on the submit button activates the onsubmit event handler attached to the form tag -->
       <div id="guests">  </div>
-        <input class="w3-button w3-black w3-margin" type="submit" value="Submit">
-         <input class="w3-button w3-black w3-margin" type="reset" value="Submit">
+        <input class="submitStyle" type="submit" value="Submit">
+        <input class="submitStyle" type="reset" value="Reset">
       </div>
       </div>
       
@@ -77,7 +77,7 @@
   </section>
 
   <footer class="w3-container ">
-    <p> &copy; 2024 CS3 Teachers </p>
+    <p> &copy; 2025 Requioma </p>
   </footer>
 
   <script>

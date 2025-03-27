@@ -9,9 +9,10 @@ html {
 
 
 body {
-  font-family: arial, san-serif;
-  background-color: cornsilk;
-  color: royalblue
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: #f4e5ec;
+  color: #816d78
 }
 
 h1,
@@ -19,7 +20,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: cursive;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 th,
@@ -29,19 +31,38 @@ td {
   padding: 10px;
 }
 
+.submitStyle {
+  position: relative;
+  margin: 10px;
+  left: 60px;
+  color:#f4e5ec;
+  background-color: #816d78;
+}
+
+.submitStyle:hover {
+  color:#f4e5ec;
+  background-color: #b095a3;
+  transform:scale(1.25);
+}
+
+.submitStyle:active {
+  color:#f4e5ec;
+  background-color: #816d78;
+  transform:scale(1.25);
+}
 
 #header {
-  border: 1px solid royalblue;
+  border: 1px solid #816d78;
   padding: 20px;
 }
 
 #input {
-  border: 1px solid royalblue;
+  border: 1px solid #816d78;
   padding: 20px;
 }
 
 #output {
-  border: 1px solid royalblue;
+  border: 1px solid #816d78;
   padding: 20px;
   overflow: scroll;
   background-color: black;

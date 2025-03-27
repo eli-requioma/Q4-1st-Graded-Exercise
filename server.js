@@ -25,7 +25,14 @@ app.get("/", (req, res) => {
 // Create express route binder for draw.hbs and get the data from the url as parameters
 // that came from index.hbs
 
+app.get("/happy", (req, res) => {
+  res.render('happy');
+});
 
+app.post("/happy", (req, res) => {
+  const { name, gender, number } = req.body;
+  console.log('happy', { name, gender, number });
+});
 
 //Makes the app listen to port 3000
 app.listen(port, () => console.log(`App listening to port ${port}`));
