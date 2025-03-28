@@ -46,16 +46,45 @@ app.post("/happy", (req, res) => {
   const happyBdayArr = happyBday.split(" ");
   console.log(happyBdayArr);
   const combinedHappyBday = [];
-  
-  for (let i = 0; i < happyBdayArr.length; i++){
+  const jollyGoodFellow = "For ______ a jolly good fellow. For ______ a jolly good fellow. For ______ a jolly good fellow, which nobody can deny!";
+  const jollyGoodFellowArr = jollyGoodFellow.split(" ");
+  console.log(jollyGoodFellowArr);
+  for (let i = 0; i <= happyBdayArr.length; i++){
     let guestIndex = i % gNames.length;
     if (i == 11) {
       combinedHappyBday.push(`${gNames[guestIndex]}: ${name}`);
+    }
+    else if (i == happyBdayArr.length) {
+      if (gender === "female") {
+        const updatedJollyGoodFellow = jollyGoodFellowArr.reduce((combine, element) => {
+          if (element === "______") {
+            combine.push("she's");
+          }
+          else {
+            combine.push(element);
+          }
+          return combine;
+        }, []);
+        combinedHappyBday.push(`${gNames[guestIndex]}:`, updatedJollyGoodFellow);
+      }
+      else {
+        const updatedJollyGoodFellow = jollyGoodFellowArr.reduce((combine, element) => {
+          if (element === "______") {
+            combine.push("he's");
+          }
+          else {
+            combine.push(element);
+          }
+          return combine;
+        }, []);
+        combinedHappyBday.push(`${gNames[guestIndex]}:`, updatedJollyGoodFellow);
+      }
     }
     else {
       combinedHappyBday.push(`${gNames[guestIndex]}: ${happyBdayArr[i]}`);
     }
   }
+  
   /*const combinedObj = gNames.reduce((obj, key, index) => {
     obj[key] = happyBdayArr[index % happyBdayArr.length];
     return obj;
