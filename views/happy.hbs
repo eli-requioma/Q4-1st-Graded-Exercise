@@ -12,12 +12,11 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- local css property definitions to further enhance the page -->
   <link href="style.css" rel="stylesheet" type="text/css" />
-
   <link rel="icon" type="image/x-icon" href="">
 </head>
 
 <!--- classes that starts with w3 are defined inside w3.css -->
-<body class="w3-container w3-auto">
+<body class="w3-container w3-auto" onload="solve()">
 
   <!-- do define the navigation bar using classes to define a button styled as a link
       take note: just a demonsration on how it can be used. Responsive to the size of the viewport
@@ -27,16 +26,26 @@
     <a href="#" class="w3-bar-item w3-button w3-mobile">Happy</a> 
   </div>
 
-
   <header class="w3-container" id="header" > 
     <h1>Elizabeth Requioma - 9-Rb - Mar 2025</h1>
     <h2> Birthday </h2>
   </header>
 
-  <section class="w3-container" id="input"> 
+  <section class="w3-container"> 
     <h2>Output</h2>
-    <!-- Place your output here -->
-    
+    <p>
+      {{#each inputData}}
+      {{@key}}: {{this}} <br>
+      {{/each}}
+    </p>
+  </section>
+  <section id="output">
+    <h2>Happy Birthday Song</h2>
+    <p>
+      {{#each combinedObj}}
+      {{@key}}: {{this}} <br>
+      {{/each}}
+    </p>
   </section>
 
   <footer class="w3-container ">

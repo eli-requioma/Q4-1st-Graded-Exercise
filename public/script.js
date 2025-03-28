@@ -13,7 +13,6 @@ function solve(){
     console.log(formData.get('gender'));
     let gender = formData.get('gender');
 
-  
     /* Use the songs below needed in this exercise:
     
     the Good Fellow replacing blanks with either he's or she's
@@ -25,7 +24,6 @@ function solve(){
   Happy birthday to you. Happy birthday to you. Happy birthday dear ________. Happy birthday to you!`.split(' ');
  
     */
-
 
   
 }
