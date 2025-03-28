@@ -41,17 +41,28 @@ app.post("/happy", (req, res) => {
   }
   console.log(gNames);
   console.log('happy', { inputData });
-  //res.render("happy", { name, gender, number,  });
-  res.render("happy", {inputData, gNames});
   //create an array for happy birthday song
   const happyBday = "Happy birthday to you. Happy birthday to you. Happy birthday dear ________. Happy birthday to you!";
   const happyBdayArr = happyBday.split(" ");
   console.log(happyBdayArr);
-  const combinedObj = gNames.reduce((obj, key, index) => {
+  const combinedHappyBday = [];
+  
+  for (let i = 0; i < happyBdayArr.length; i++){
+    let guestIndex = i % gNames.length;
+    if (i == 11) {
+      combinedHappyBday.push(`${gNames[guestIndex]}: ${name}`);
+    }
+    else {
+      combinedHappyBday.push(`${gNames[guestIndex]}: ${happyBdayArr[i]}`);
+    }
+  }
+  /*const combinedObj = gNames.reduce((obj, key, index) => {
     obj[key] = happyBdayArr[index % happyBdayArr.length];
     return obj;
   }, {});
-  console.log(combinedObj);
+  console.log(combinedObj);*/
+  console.log(combinedHappyBday);
+  res.render("happy", {inputData, gNames, combinedHappyBday});
 });
 
 
